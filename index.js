@@ -126,10 +126,10 @@ app.get('/login', viewLogin);
 /// ***************** ***************** *****************
 app.get('/products', viewProducts);
 async function viewProducts(request, response) {
-    if (typeof (request.session.login_user) == "undefined")
-    {
-        response.redirect("/login");
-    }
+   // if (typeof (request.session.login_user) == "undefined")
+  //  {
+   //     response.redirect("/login");
+   // }
     responseDB(response, "productlist",
 				Product, {}, { username : request.session.login_user }, "productlist");
 }
