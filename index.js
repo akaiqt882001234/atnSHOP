@@ -43,8 +43,9 @@ const Staff = require('./models/staff');
 const viewLogin = require('./controllers/logincontroller');
 
 /// ***************** 
-//const urixx = 'mongodb://localhost:27017/atnshop';
-//const urixx= "mongodb+srv://db03:aGBZRta11CBmt8qL@cluster0-q8a6f.mongodb.net/CloudDB?retryWrites=true&w=majority";
+//const uri = 'mongodb://localhost:27017/atnshop';
+//const urixx = "mongodb+srv://db03:aGBZRta11CBmt8qL@cluster0-q8a6f.mongodb.net/CloudDB?retryWrites=true&w=majority";
+
 const uri = "mongodb+srv://viet:123@cluster0-pbtyg.mongodb.net/atnshop?retryWrites=true&w=majority";
 
 /// ***************** ***************** *****************
@@ -181,7 +182,7 @@ function viewPayment(request, response) {
     listsp = [];
     for (i=0; i< listkq.length / 2; i++) {
         listsp.push(
-            { Name : "Sản phẩm" + listkq[i*2], Price :"." , Num: listkq[i*2+1]},
+            { Name : "/ " + listkq[i*2], Price : 3000, Num: listkq[i*2+1]},
         );
     }
     
