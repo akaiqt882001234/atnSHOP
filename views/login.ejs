@@ -1,8 +1,5 @@
 
 
-
-   
-        
 <html>
     <%- include('partials/header') -%>
 
@@ -11,10 +8,10 @@
         <form action="login">
             <P>Username: <input type="text" name="username"></P>
             <P>Password: <input type="password" name="password"></P>
-            <P><input type="/products" value="Login"></P>
-            
+            <P><input type="submit" value="Login"></P>
         </form>
 
+		<P> Msg: <%=mesg%> </P>
 
         <%- include('partials/footer') -%>
     </body>
