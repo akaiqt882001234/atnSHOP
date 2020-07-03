@@ -9,8 +9,9 @@ const Account = require('../models/account');
 
 
 /// ***************** 
-const uri = 'mongodb://localhost:27017/atnshop';
-const urirem = "mongodb+srv://db03:aGBZRta11CBmt8qL@cluster0-q8a6f.mongodb.net/CloudDB?retryWrites=true&w=majority";
+//const uri = 'mongodb://localhost:27017/atnshop';
+//const urirem = "mongodb+srv://db03:aGBZRta11CBmt8qL@cluster0-q8a6f.mongodb.net/CloudDB?retryWrites=true&w=majority";
+const uri = "mongodb+srv://viet:123@cluster0-pbtyg.mongodb.net/atnshop?retryWrites=true&w=majority";
 
 
 /// ***************** ***************** *****************
