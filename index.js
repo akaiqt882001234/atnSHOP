@@ -126,10 +126,10 @@ app.get('/login', viewLogin);
 /// ***************** ***************** *****************
 app.get('/products', viewProducts);
 async function viewProducts(request, response) {
-   // if (typeof (request.session.login_user) == "undefined")
-  //  {
-   //     response.redirect("/login");
-   // }
+   if (typeof (request.session.login_user) == "undefined")
+    {
+        response.redirect("/login");
+   }
     responseDB(response, "productlist",
 				Product, {}, { username : request.session.login_user }, "productlist");
 }
@@ -172,22 +172,22 @@ function viewOrder(request, response) {
 
 /// /payment
 /// ***************** ***************** *****************
-app.get('/payment', viewPayment);
-function viewPayment(request, response) {
+//app.get('/payment', viewPayment);
+//function viewPayment(request, response) {
     //response.send("Web - PAYMENT page !" + request.query.dssp);
-    var dssp = request.query.dssp;
-    var listkq = dssp.split("_");
+   // var dssp = request.query.dssp;
+   // var listkq = dssp.split("_");
 
-    listsp = [];
-    for (i=0; i< listkq.length / 2; i++) {
-        listsp.push(
-            { Name : "Tivi " + listkq[i*2], Price : 30000, Num: listkq[i*2+1]},
-        );
-    }
+  //  listsp = [];
+  //  for (i=0; i< listkq.length / 2; i++) {
+   //     listsp.push(
+    //        { Name : "Tivi " + listkq[i*2], Price : 30000, Num: listkq[i*2+1]},
+   //     );
+   // }
     
 
-    response.render("payment", { username : request.session.login_user , productlist : listsp });
-}
+  //  response.render("payment", { username : request.session.login_user , productlist : listsp });
+//}
 
 
 
